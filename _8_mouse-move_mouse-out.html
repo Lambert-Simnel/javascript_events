@@ -4,6 +4,8 @@
 <head>
     <script>
         function displayCoordinates(event) {
+            document.getElementById("coorvalues").innerHTML = "Coordinates [" + event.clientX + ":" + event.clientY + "]"
+            
             /*
                 TODO implement the function:
                 - get x, get y
@@ -12,6 +14,7 @@
         }
 
         function clearCoor() {
+            document.getElementById("coorvalues").innerHTML = ""
             /*
                 TODO implement the function:
                 - clear coorvalues paragraph

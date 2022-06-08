@@ -2,14 +2,7 @@
 <html>
 
 <head>
-  <script>
-    function displayDate() {
-      /*
-        TODO
-        - display Date in the "date" paragraph
-      */
-    }
-  </script>
+
 </head>
 
 <body>
@@ -18,8 +11,18 @@
   <p id="date"></p>
 
   <!-- TODO add onclick event to call displayDate() -->
-  <button type="button">Click me to display Date.</button>
+  <button type="button" id="button">Click me to display Date.</button>
 
 </body>
 
+  <script>
+    document.getElementById("button").addEventListener("click", toggleDate)
+    function toggleDate() {
+      if(!document.getElementById("date").innerHTML){
+      document.getElementById("date").innerHTML = Date();
+      } else {
+        document.getElementById("date").innerHTML = "";
+      }
+    }
+  </script>
 </html>

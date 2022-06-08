@@ -5,11 +5,13 @@
 
   <h2>JavaScript HTML Events - on change</h2>
   <!-- TODO Use onchange event to call the upperCase() function-->
-  Enter a text: <input type="text" id="aText">
+  Enter a text: <input type="text" id="aText" onchange="upperCase()">
   <p>When you leave the input field, the text is transformed to upper case.</p>
 
   <script>
     function upperCase() {
+      document.getElementById("aText").value = document.getElementById("aText").value.toUpperCase()
+      
       /*
         TODO Implement the function: 
         change the text inside the input element to upper case.
